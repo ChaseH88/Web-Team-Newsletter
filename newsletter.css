@@ -1,0 +1,70 @@
+/* PAGE FLIP CSS, DO NOT EDIT!!!! */
+#newsletter {opacity: 0;width: 50%;height: 100%;margin: 0 0 0 auto;-webkit-perspective: 2000px;perspective: 2000px;transition: opacity 1s ease; float: none !important;}
+#newsletter.visible {opacity: 1;}
+#newsletter #content {background: transparent !important; border: 0; padding: 0;}
+#newsletter div.newsletterWrap {position: relative;width: 100%;height: 800px; -webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
+#newsletter div.newsletterWrap > ul {list-style-type: none; margin: 0; padding: 0;}
+#newsletter div.newsletterWrap > ul div.page {position: absolute;color: black;width: 100%;height: 100%;-webkit-transition: 1.5s -webkit-transform;transition: 1.5s transform;-webkit-transform-style: preserve-3d;transform-style: preserve-3d;-webkit-transform-origin: left center;-ms-transform-origin: left center;transform-origin: left center;z-index: 1;}
+#newsletter div.newsletterWrap > ul div.page.flipped {-webkit-transform: rotateY(-180deg); transform: rotateY(-180deg);}
+#newsletter div.newsletterWrap > ul div.page.active {z-index: 100}
+#newsletter div.newsletterWrap > ul div.page.flipped:last-of-type {z-index: 100;}
+#newsletter div.newsletterWrap > ul div.page > li {position: absolute;width: 100%;height: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; -moz-backface-visibility: hidden !important;}
+#newsletter div.newsletterWrap > ul div.page > li.back {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+/*moves newsletter inside of script*/
+#newsletter div.newsletterWrap > ul div.page > li.front > main {margin: 0 auto 0 0;}
+#newsletter div.newsletterWrap > ul div.page > li.back > main {margin: 0 0 0 auto;}
+#newsletter.right div.newsletterWrap > ul div.page.flipped {z-index: 101}
+#newsletter.left div.page.active {z-index: 200;}
+#newsletter.left div.newsletterWrap div.page:not(.active) {z-index: 1;}
+#newsletter.left div.newsletterWrap div.active + div {z-index: 99 !important;}
+#newsletter div.page.hidden li.front header.topBar {display: none;} /* hides prev title in firefox*/
+div.page.flipped.hidden:last-child:not(.active) > li.front {-moz-backface-visibility: hidden !important; backface-visibility: hidden !important; pointer-events: none;} /* if nothing on the last page, prevents front from showing in some browsers*/
+/* Newsletter controls */
+div.newsletter.controls {position: fixed; top: 50%; left: 0; right: 0; bottom: auto; transform: translatey(-50%);}
+div.newsletter.controls a {position: absolute; top: 0; left: auto; right: auto; bottom: auto}
+div.newsletter.controls a.prev {left: 50px !important;}
+div.newsletter.controls a.next {right: 50px !important;}
+div.newsletter.controls a:before {font-family: FontAwesome;}
+div.newsletter.controls a.prev:before {}
+div.newsletter.controls a.next:before {}
+/* for back pages (prev button) */
+li.back #nextBtn {right: auto; left: 0; transform: scaleX(-1);}
+li.back #nextBtn p {transform: scaleX(-1) !important;} 
+/*prev and next buttons*/
+main {position: relative;}
+li.front #nextBtn:after {right: 0; }
+li.back #nextBtn:after {left: 0; }
+#nextBtn:after {width: 0; height: 0; content: ""; position: absolute; bottom: 0; top: auto; border-bottom: 100px solid #D6EFFB; border-left: 100px solid transparent; z-index: 10; animation: pulse 2s infinite alternate ease-in-out;}
+#nextBtn p {z-index: 11;}
+#nextBtn p a {animation: pulse2 2s infinite alternate ease-in-out;}
+@keyframes pulse {0% {border-bottom-color: #D6EFFB} 100% { border-bottom-color: #015DAA;}}
+@keyframes pulse2 {0% {color: #015DAA} 100% { color: #D6EFFB;}}
+/* Page Numbers */
+#newsletter div.pageNum {position: absolute; bottom: 10px; top: auto;}
+#newsletter li.front div.pageNum {right: 110px; left: auto;}
+#newsletter li.back div.pageNum {left: 100px; right: auto;}
+/*do not delete*/
+#newsletter div.page.active:first-child li.back {pointer-events: none;}
+#newsletter div.page.hidden.remove {pointer-events: none !important;}
+#newsletter div.page.hidden li.front {pointer-events: none;}
+#newsletter div.newsletterWrap > ul div.page.active:first-child ~ div {pointer-events: none;}
+#newsletter div.newsletterWrap > ul div.page.active > li.back {pointer-events: none;}
+#newsletter div.newsletterWrap > ul div.page:not(.flipped):not(.active) {pointer-events: none;}
+/* Presence overrides */
+#newsletter #logo img {max-width: 275px;}
+#newsletter .container {min-height: 0 !important;}
+#content div.intRightCol div {overflow: visible !important}
+.subpage #content div.colWrap {display: block !important; min-width: 100%;}
+.subpage #template div.intLeftCol {display: none; float: none !important;}
+.subpage #template div.intRightCol {flex: 1 100%;float: none !important;padding: 0;}
+/*form on last page*/
+#secure-form > section {display: flex;}
+#secure-form > section > div.formLeft {flex: 1 50%;}
+#secure-form > section > div.formRight {flex: 1 50%;}
+/*disable effects of the isSmaller class*/
+#template {background-position: center}
+#fakeHeader {position: static;}
+div#overview {margin: 0 !important;}
+.isSmaller #utilityNav li a {font-size: 14px; padding: 20px;}
+.isSmaller #headerBot {padding: 20px 0;}
+.isSmaller #primaryNav div.RadMenu > ul > li > a, .isSmaller #primaryNav div.RadMenu > ul ul li a {font-size: 16px;}

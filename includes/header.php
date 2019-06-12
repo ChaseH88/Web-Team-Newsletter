@@ -48,11 +48,17 @@
         <div id="logo">
           <a href="https://www.televox.com"><img src="includes/images/west_logo.png"></a>
         </div>
+        <div class="nav">
+          <ul>
+            <li><a href="january2019.php">January 2019</a></li>
+            <li><a href="june2019.php">June 2019</a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="pageTitle">
       <div class="container">
-        <h1>Newsletter - January 2019</h1>
+        <h1>West Web Wisdom</h1>
       </div>
       <!--container-->
     </section>

@@ -1,10 +1,10 @@
 <?php
 
 # Will set the date for the edition across all pages
-$editionDate = 'January 2019';
+$editionDate = 'Summer 2019';
 
 # Display the edition
-$issue = 'Issue I';
+$issue = 'Issue II';
 
 # Will display menu
 $editionMenu = '

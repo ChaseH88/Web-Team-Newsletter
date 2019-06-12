@@ -2,21 +2,16 @@
 <html>
 
 <head>
-  <title>West Web Wisdom</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.js"></script>
-  <script src="public/newsletter.js"></script>
-  <link rel="stylesheet" type="text/css" href="public/newsletter.css">
-  <link rel="stylesheet" type="text/css" href="includes/page.css">
-
-
-
+  <?php require("includes/head.php"); ?>
 </head>
 
 <body>
   <?php require("includes/header.php"); ?>
 
-    <?php include("pages/edition1/MAIN.php"); ?>
+  <div class="container">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur nisi, ipsum error a aut rem aperiam. Asperiores impedit ea dolores nostrum, molestias voluptatem reiciendis amet, omnis in expedita praesentium facilis.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis fuga ut, harum dolorum aperiam sint sunt consequatur veritatis, dolore cumque praesentium, animi tempore doloribus soluta id ex excepturi illo laboriosam!</p>
+  </div>
 
   <?php require("includes/footer.php"); ?>
 </body>

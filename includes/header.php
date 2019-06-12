@@ -48,10 +48,14 @@
         <div id="logo">
           <a href="https://www.televox.com"><img src="includes/images/west_logo.png"></a>
         </div>
-        <div class="nav">
-          <ul>
-            <li><a href="january2019.php">January 2019</a></li>
-            <li><a href="june2019.php">June 2019</a></li>
+        <div id="nav">
+          <ul class="parent">
+            <li>2019
+              <ul class="sub">
+                <li><a href="january2019.php">Spring 2019</a></li>
+                <li><a href="june2019.php">Summer 2019</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

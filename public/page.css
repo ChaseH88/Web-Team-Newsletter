@@ -57,6 +57,16 @@ section.pageTitle {background: #009ee1;padding: 30px 0;margin: 0 0 2vw;}
 
 /*fake header*/
 #fakeHeader {background-color: #005DAC !important; padding: 10px 0;}
+#fakeHeader > div.container {display: flex; align-items: center;}
+#fakeHeader > div.container > #logo {flex: 1 1 auto; text-align: left;}
+#fakeHeader > div.container > #nav {flex: 1 1 auto; text-align: right;}
+/*nav*/
+#nav > ul.parent {margin: 0; padding: 0; list-style-type: none;}
+#nav > ul.parent > li {display: inline-block; margin: 0 0 0 15px; position: relative; cursor: pointer; color: #fff; font-size: 20px;}
+#nav > ul.parent > li:hover > ul {display: block;}
+#nav > ul.parent > li > ul {display: none; position: absolute; top: 100%; text-align: left; background-color: #1F1F1F; left: auto; right: 0; min-width: 160px; padding: 5px 0; list-style-type: none; margin: 0;}
+#nav > ul.parent > li > ul > li > a {color: #fff; padding: 15px 10px; display: block; text-decoration: none; font-size: 15px;}
+#nav > ul.parent > li > ul > li > a:hover {background-color: #000;}
 
 /* Footer */
 footer {padding: 10px 0 15px;background-color:#FFFFFF;text-align:left;margin: 2vw 0 0;}
@@ -68,5 +78,4 @@ footer a::after { background-color:#ffffff;  }
 footer span.label_skin_corporation, footer .admin_menu { font-family:inherit; font-size:inherit;  }
 footer .admin_menu { margin:0; font-weight:700; text-decoration:none;  }
 #footerWest {display:flex;text-align:left;font-size:14px;border-bottom: 1px solid #cccccc;padding:0 0 20px 0;margin: 0 0 20px;}
-#footerWest span {  }
 #footerWest span:first-child {padding: 0 20px 28px 0;min-width:80px;display:  inline-block;}

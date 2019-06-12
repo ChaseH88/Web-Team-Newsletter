@@ -8,6 +8,12 @@
         #----------------------------------------------------------------
 
           include('front.php');
+          include('mega-menu.php');
+          include('mock-logos.php');
+          include('overlay-menu.php');
+          include('vision-tool.php');
+          include('before-after.php');
+          include('sites-through-time.php');
           include('pages/feedbackPage.php'); #this will be included on every edition
 
         #----------------------------------------------------------------

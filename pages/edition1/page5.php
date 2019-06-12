@@ -1,4 +1,4 @@
-<?php require("setup.php") ?>
+<?php require("_SETUP.php") ?>
 <li>
   <main id="newsletterWrap" class="pageSeven">
   <header class="topBar">

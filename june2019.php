@@ -8,7 +8,9 @@
 <body>
   <?php require("includes/header.php"); ?>
 
-    <?php include("pages/edition2/_MAIN.php"); ?>
+    <div class="container">
+      <?php include("pages/edition2/_MAIN.php"); ?>
+    </div>
 
   <?php require("includes/footer.php"); ?>
 </body>

@@ -1,4 +1,4 @@
-<div id="newsletter">
+<div id="newsletter" class="">
     <div class="newsletterWrap">
       <ul>
         <?php
@@ -13,7 +13,8 @@
           include('overlay-menu.php');
           include('vision-tool.php');
           include('before-after.php');
-          include('sites-through-time.php');
+          include('sites-through-time1.php');
+          include('sites-through-time2.php');
           include('pages/feedbackPage.php'); #this will be included on every edition
 
         #----------------------------------------------------------------

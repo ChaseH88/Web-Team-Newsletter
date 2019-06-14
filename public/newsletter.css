@@ -52,10 +52,10 @@ ul#sideNav a:hover, ul#sideNav a:focus {color:#DBF1FC; text-decoration:underline
 .subHeader {color: #009ee2;font-size: 12px; font-weight:400; font-family: 'Poppins', sans-serif;}
 #content img {max-width:100%;}
 #content h1, #contentWrap aside h1, #overview h1 {margin:0; color: #009ee2; font-size: 36px; line-height:1.1em; font-weight:400; font-family: 'Poppins', sans-serif;}
-#content h2, #contentWrap aside h2 {margin: 20px 0 0; color: #009ee2; font-size:20px; line-height:1.3em; font-weight:400; font-family: 'Poppins', sans-serif; }
-#content p, #contentWrap aside, #content ul li {color: #4e4e4e;font-size:14px;line-height:20px;font-weight:400;font-family: 'Poppins', sans-serif;}
-#content a, #contentWrap a {font-weight:600; text-decoration:none; color:#ED1C24}
-#content a:hover, #contentWrap a:hover, #content a:focus, #contentWrap a:focus {color:#000; text-decoration:underline}
+#content h2, #contentWrap aside h2 {margin: 20px 0 0; color: #009ee2; font-size:28px; line-height:1.3em; font-weight:400; font-family: 'Poppins', sans-serif; }
+#newsletter p, #contentWrap aside, #content ul li, .pageNum span {color: #4e4e4e;font-size:14px;line-height:20px;font-weight:400;font-family: 'Poppins', sans-serif;}
+#newsletter a, #contentWrap a {font-weight:600; text-decoration:none; color:#ED1C24}
+#newsletter a:hover, #contentWrap a:hover, #newsletter a:focus, #contentWrap a:focus {color:#000; text-decoration:underline}
 
 /* right side - image */
 #contentWrap aside img {width: 100%}
@@ -223,6 +223,23 @@ div#overview {margin: 0 !important;}
 #contributors {position:absolute; bottom:15px; top:auto; left:25px; right: auto; }
 #contributors p {font-family: 'Poppins', sans-serif; font-size:12px; color: #009ee2; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);}
 #contributors .title {text-transform:uppercase; color: #005dac}
+
+/*Flex Column Classes for Main Content*/
+#theme #contentWrap > div.container.wrap {flex-wrap: wrap;}
+#theme #contentWrap > div.container.nowrap {flex-wrap: nowrap;}
+#theme #contentWrap .first {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
+#theme #contentWrap .second {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
+#theme #contentWrap .flex-10 {-webkit-box-flex: 1;-ms-flex: 1 1 10%;flex: 1 1 10%;}
+#theme #contentWrap .flex-20 {-webkit-box-flex: 1;-ms-flex: 1 1 20%;flex: 1 1 20%;}
+#theme #contentWrap .flex-30 {-webkit-box-flex: 1;-ms-flex: 1 1 30%;flex: 1 1 30%;}
+#theme #contentWrap .flex-40 {-webkit-box-flex: 1;-ms-flex: 1 1 40%;flex: 1 1 40%;}
+#theme #contentWrap .flex-50 {-webkit-box-flex: 1;-ms-flex: 1 1 50%;flex: 1 1 50%;}
+#theme #contentWrap .flex-60 {-webkit-box-flex: 1;-ms-flex: 1 1 60%;flex: 1 1 60%;}
+#theme #contentWrap .flex-70 {-webkit-box-flex: 1;-ms-flex: 1 1 70%;flex: 1 1 70%;}
+#theme #contentWrap .flex-80 {-webkit-box-flex: 1;-ms-flex: 1 1 80%;flex: 1 1 80%;}
+#theme #contentWrap .flex-90 {-webkit-box-flex: 1;-ms-flex: 1 1 90%;flex: 1 1 90%;}
+#theme #contentWrap .flex-100 {-webkit-box-flex: 1;-ms-flex: 1 1 100%;flex: 1 1 100%;}
+
 /* DEFAULT FOR BANNER */
 #banner h3 {margin: 20px 0 0;}
 .slider.controls .cycle-slideshow {

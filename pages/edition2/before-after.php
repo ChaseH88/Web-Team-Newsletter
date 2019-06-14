@@ -1,6 +1,6 @@
 <?php require("_SETUP.php") ?>
 <li>
-  <main id="newsletterWrap" class="pageThree">
+  <main id="newsletterWrap" class="">
   <header class="topBar">
       <div class="container"> <a class="nav" href="#" onclick="return false;"> </a>
         <p><?php echo $editionDate ?></p>

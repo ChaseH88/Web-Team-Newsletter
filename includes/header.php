@@ -50,7 +50,7 @@
         </div>
         <div id="nav">
           <ul class="parent">
-            <li>2019
+            <li>2019 Editions
               <ul class="sub">
                 <li><a href="january2019.php">Spring 2019</a></li>
                 <li><a href="june2019.php">Summer 2019</a></li>

@@ -1,12 +1,12 @@
 <?php
 # THE SETUP FILE WILL NEED TO BE CONFIGURED BASED ON EDITION
+require("_SETUP.php");
 
 # --VARIABLES--
 
 # $editionDate <-- this will be the current release month and year
 # $editionMenu <-- this is the html for the menu, this will need to be coded out
 
-require("setup.php");
 ?>
 <li>
   <main id="newsletterWrap" class="pageThree">

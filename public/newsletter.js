@@ -1,14 +1,20 @@
 $(document).ready(function(){
   
   // Construct the newsletter
-  function createPages(){
-    var pageList = $("#newsletter div.newsletterWrap > ul > li");
-    $.pages = 2;
-    for(var i = 0; i < pageList.length; i+=$.pages) {
-        pageList.slice(i, i+$.pages).wrapAll("<div class='page'></div>");
-    }
-  }
-  createPages();
+  (function createPages(){
+		if($("#newsletter").length){
+			var pageList = $("#newsletter div.newsletterWrap > ul > li");
+			var pages = 2;
+			for(var i = 0; i < pageList.length; i+=pages) {
+				pageList.slice(i, i+pages).wrapAll("<div class='page'></div>");
+			}
+			//add the page flip sound html
+			$(`<audio id="pageFlipSound" style="display: none;">
+						 <source src="public/page-flip.mp3" type="audio/mpeg">
+				 </audio>`).appendTo("body");
+		}
+  })();
+
   var count = 1;
 		var pageCount = 0;
   // Assign classes to pages
@@ -112,11 +118,15 @@ function prevPage() {
 				$("#newsletter div.page").eq(parseInt($(".page").length-2)).removeClass("remove");
 		}
 	$("div.page").eq($(".page.active").index()-1).removeClass("remove");
+	setTimeout(function(){
+		pageFlipSound() //page flip sound
+	}, 250);
 }
 function nextPage() {
 		$("#newsletter").removeClass("left").addClass("right");
   $('.active').removeClass('active').addClass('flipped')
-    .next('.page').addClass('active').siblings();
+	.next('.page').addClass('active').siblings();
+	pageFlipSound() //page flip sound
 	setTimeout(function() {
 		$(".flipped").addClass("hidden");
 		var pageIndex = parseInt($("div.page.active").index()+1);
@@ -128,6 +138,13 @@ function nextPage() {
 				$("div.page").slice(0,length-1).addClass("remove");
 	}
 	}, 750);
+}
+
+function pageFlipSound(){
+	var audio = document.querySelector("#pageFlipSound");
+	//reset to start time
+	audio.currentTime = 0;
+	audio.play();
 }
 
 

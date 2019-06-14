@@ -8,6 +8,7 @@ $(document).ready(function(){
 			for(var i = 0; i < pageList.length; i+=pages) {
 				pageList.slice(i, i+pages).wrapAll("<div class='page'></div>");
 			}
+			$("#newsletter").addClass("no-select");
 			//add the page flip sound html
 			$(`<audio id="pageFlipSound" style="display: none;">
 						 <source src="public/page-flip.mp3" type="audio/mpeg">
@@ -104,18 +105,12 @@ $('.newsletterWrap').on("swiperight", prevPage);
 			if(!hover) return;
 			mousePosUp = e.clientX;
 			let diff = mousePosDown - mousePosUp;
-			if(diff < 0) diff = Math.abs(diff);
-			if(diff < 200){
-				document.querySelector("body").classList.remove("no-select");
-			} else {
+			diff < 0 ? diff = Math.abs(diff) : "";
+			diff < 200 ?
+				document.querySelector("body").classList.remove("no-select") :
 				document.querySelector("body").classList.add("no-select");
-			}
-			if(mousePosDown > mousePosUp && diff > 200) {
-				nextPage();
-			}
-			if(mousePosUp > mousePosDown && diff > 200) {
-				prevPage();
-			} 
+			if(mousePosDown > mousePosUp && diff > 200) nextPage();
+			if(mousePosUp > mousePosDown && diff > 200)	prevPage(); 
 		});
 	})();
 
@@ -155,7 +150,6 @@ function prevPage() {
 	$("div.page").eq($(".page.active").index()-1).removeClass("remove");
 	setTimeout(function(){
 		pageFlipSound() //page flip sound
-		document.querySelector("body").classList.remove("no-select");
 	}, 250);
 }
 function nextPage() {
@@ -173,7 +167,6 @@ function nextPage() {
 	if($("div.page.active").index() === -1){
 				$("div.page").slice(0,length-1).addClass("remove");
 	}
-	document.querySelector("body").classList.remove("no-select");
 }, 750);
 }
 

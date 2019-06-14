@@ -12,7 +12,7 @@ box-shadow: inset 0px -5px 0px 0px rgba(237,28,36,1);}
 #newsletterWrap {position:relative; overflow:hidden; height:100%; max-width:605px; margin: 0 auto; background: url("../images/page-bg.jpg") no-repeat center center / cover; -webkit-box-shadow: inset 0px -5px 0px 0px rgba(237,28,36,1);
 -moz-box-shadow: inset 0px -5px 0px 0px rgba(237,28,36,1);
 box-shadow: inset 0px -5px 0px 0px rgba(237,28,36,1);}
-#newsletter h3 {color: #009ee2}
+#newsletter h3 {color: #009ee2; font-weight: 400;}
 
 /* top bar */
 header.topBar p {color: #fff !important; line-height: normal !important}
@@ -130,9 +130,10 @@ div.stats > div.row > div p {margin: 0; padding: 0;}
 div.stats > div.row:nth-child(odd) p {color: #fff !important;}
 
 /* PAGE FLIP CSS, DO NOT EDIT!!!! */
-#newsletter {opacity: 0;width: 50%;height: 100%;margin: 0 0 0 auto;-webkit-perspective: 2000px;perspective: 2000px;transition: opacity 1s ease; float: none !important;}
-.no-select #newsletter {user-select: none;}
+#newsletter {cursor: grab; opacity: 0;width: 50%;height: 100%;margin: 0 0 0 auto;-webkit-perspective: 2000px;perspective: 2000px;transition: opacity 1s ease; float: none !important;}
+#newsletter.no-select {user-select: none;}
 #newsletter.visible {opacity: 1;}
+#newsletter.grab {cursor: grabbing;}
 #newsletter #content {background: transparent !important; border: 0; padding: 0;}
 #newsletter div.newsletterWrap {position: relative;width: 100%;height: 800px; -webkit-transform-style: preserve-3d;transform-style: preserve-3d;}
 #newsletter div.newsletterWrap > ul {list-style-type: none; margin: 0; padding: 0;}

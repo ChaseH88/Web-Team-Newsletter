@@ -131,6 +131,7 @@ div.stats > div.row:nth-child(odd) p {color: #fff !important;}
 
 /* PAGE FLIP CSS, DO NOT EDIT!!!! */
 #newsletter {opacity: 0;width: 50%;height: 100%;margin: 0 0 0 auto;-webkit-perspective: 2000px;perspective: 2000px;transition: opacity 1s ease; float: none !important;}
+.no-select #newsletter {user-select: none;}
 #newsletter.visible {opacity: 1;}
 #newsletter #content {background: transparent !important; border: 0; padding: 0;}
 #newsletter div.newsletterWrap {position: relative;width: 100%;height: 800px; -webkit-transform-style: preserve-3d;transform-style: preserve-3d;}

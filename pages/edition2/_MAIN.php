@@ -12,7 +12,7 @@
           include('mock-logos.php');
           include('overlay-menu.php');
           include('vision-tool.php');
-          include('before-after.php');
+          #include('before-after.php');
           include('sites-through-time1.php');
           include('sites-through-time2.php');
           include('pages/feedbackPage.php'); #this will be included on every edition

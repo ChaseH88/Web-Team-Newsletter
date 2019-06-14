@@ -84,6 +84,41 @@ $('.newsletterWrap').on("swiperight", prevPage);
 	setTimeout(function() {
 		$("#newsletter").addClass("visible");
 	}, 2500);
+
+
+	(function changePages(){
+		let newsletter = document.querySelector("#newsletter");
+		let hover = false;
+		let [mousePosDown, mousePosUp] = [0, 0];
+		newsletter.addEventListener("mouseover", () => {
+			hover = true;
+		});
+		newsletter.addEventListener("mouseout", () => {
+			hover = false;
+		});
+		newsletter.addEventListener("mousedown", (e) => {
+			if(!hover) return;
+			mousePosDown = e.clientX;
+		});
+		newsletter.addEventListener("mouseup", (e) => {
+			if(!hover) return;
+			mousePosUp = e.clientX;
+			let diff = mousePosDown - mousePosUp;
+			if(diff < 0) diff = Math.abs(diff);
+			if(diff < 200){
+				document.querySelector("body").classList.remove("no-select");
+			} else {
+				document.querySelector("body").classList.add("no-select");
+			}
+			if(mousePosDown > mousePosUp && diff > 200) {
+				nextPage();
+			}
+			if(mousePosUp > mousePosDown && diff > 200) {
+				prevPage();
+			} 
+		});
+	})();
+
 });//doc ready
 
 // Keyboard Accessibility
@@ -120,6 +155,7 @@ function prevPage() {
 	$("div.page").eq($(".page.active").index()-1).removeClass("remove");
 	setTimeout(function(){
 		pageFlipSound() //page flip sound
+		document.querySelector("body").classList.remove("no-select");
 	}, 250);
 }
 function nextPage() {
@@ -137,7 +173,8 @@ function nextPage() {
 	if($("div.page.active").index() === -1){
 				$("div.page").slice(0,length-1).addClass("remove");
 	}
-	}, 750);
+	document.querySelector("body").classList.remove("no-select");
+}, 750);
 }
 
 function pageFlipSound(){
@@ -146,7 +183,3 @@ function pageFlipSound(){
 	audio.currentTime = 0;
 	audio.play();
 }
-
-
-
-

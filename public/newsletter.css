@@ -21,6 +21,7 @@ header.topBar p {color: #fff !important; line-height: normal !important}
 
 /* top bar - navigation */
 .topBar a.nav { display:inline-block; vertical-align:top; height:18px; width:40px; background-image: url("../images/nav-bg.png");background-repeat:no-repeat; background-size: contain; margin:0 0 0 47px; }
+#newsletter.summer .topBar a.nav {margin: 0 0 0 29px;}
 .topBar a.nav:hover, .topBar a.nav:focus {background-image: url("../images/nav-bg-hover.png"); }
 .topBar ul {margin: -1px 0 0 66px; padding: 15px 0; list-style-type: none; background: #d1d9dc; width: 225px;  font-size: 14px; border-left: 1px solid #ed1c24;}
 .topBar ul li {display:block;}
@@ -58,7 +59,7 @@ ul#sideNav a:hover, ul#sideNav a:focus {color:#DBF1FC; text-decoration:underline
 #newsletter a:hover, #contentWrap a:hover, #newsletter a:focus, #contentWrap a:focus {color:#000; text-decoration:underline}
 
 /* right side - image */
-#contentWrap aside img {width: 100%}
+#contentWrap aside img {max-width: 100%}
 #contentWrap aside img.long {max-height: 650px; display: table; margin: 0 auto; width: auto;}
 
 /* home page side nav */
@@ -69,7 +70,7 @@ ul#sideNav a {text-decoration:none; font-weight:400; color: #fff; font-family: '
 ul#sideNav a:hover, ul#sideNav a:focus {color:#DBF1FC; text-decoration:underline}
 
 /* home page - left side blurb */
-#blurb {padding:20px 20px 20px 85px }
+#blurb {padding:20px 20px 20px 65px }
 #blurb p {color: #009ee2; font-size:16px; font-family: 'Poppins', sans-serif; text-align: right;}
 
 /* info box - page 4 */

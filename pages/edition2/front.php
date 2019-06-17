@@ -13,7 +13,7 @@
     <section id="contentWrap">
       <div class="container">
         <aside id="navBlurb">
-          <ul id="sideNav">
+          <ul id="sideNav" style="position: relative; right: 12px;">
             <?php echo $editionMenu ?>
           </ul>
           <section id="blurb">

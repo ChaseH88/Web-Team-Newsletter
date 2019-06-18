@@ -118,12 +118,14 @@ $('.newsletterWrap').on("swiperight", prevPage);
 
 // Keyboard Accessibility
 $(window).keydown(function(e){
-   if (e.keyCode == 37) {
-      prevPage();
-   }
-  if (e.keyCode == 39) {
-      nextPage();
-   }
+	switch (e.keyCode) {
+		case 37:
+			prevPage();
+			break;
+		case 39:
+			nextPage();
+			break;
+	}
 });
 
 // Prev and Next Functions
